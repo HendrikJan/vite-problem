@@ -14,6 +14,10 @@ RUN apt-get install --no-install-recommends -y libapache2-mod-auth-openidc
 ENV TZ=Europe/Amsterdam
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+# Load certificates
+COPY ./docker/certificates/apache/localhost.crt /usr/local/apache2/conf/server.crt
+COPY ./docker/certificates/apache/localhost.key /usr/local/apache2/conf/server.key
+
 # Load configuration
 COPY ./docker/apache/httpd.conf /usr/local/apache2/conf/httpd.conf
 
