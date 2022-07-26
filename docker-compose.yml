@@ -18,7 +18,6 @@ services:
       dockerfile: docker/apache.dockerfile
     ports:
       - '7777:443'
-      - '8888:80'
     volumes:
       - ./docker/apache/extra:/usr/local/apache2/conf/extra
     networks:

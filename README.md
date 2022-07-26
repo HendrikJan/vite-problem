@@ -3,6 +3,5 @@
 1. Start Docker-compose with this command: `docker compose up`
 2. Log in to the xnodejs Docker container: `docker exec -it xnodejs bash`
 3. Now inside the xnodejs container start vite: `npm run vite`
-4. Start the http server here `http://localhost:7777/@vite/client`
-5. Start the https server here `https://localhost:8888/@vite/client`
+4. Start the https server here `https://localhost:7777/@vite/client`
 6. See that the client keeps reloading
